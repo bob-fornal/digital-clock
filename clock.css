@@ -1,0 +1,57 @@
+
+@font-face {
+  font-family: 'ticking';
+  src:url('./fonts/TickingTimebombBB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+
+  margin: 2em;
+}
+
+.basic-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.number {
+  font: 96px ticking;
+  padding: 16px 16px 0 16px;
+  text-align: center;
+}
+.identifier {
+  font: 36px ticking;
+  padding: 8px 8px 0 8px;
+  text-align: center;
+}
+
+.hours .number,
+.hours .identifier {
+  background-color: blue;
+  color: white;
+}
+
+.minutes .number,
+.minutes .identifier {
+  background-color: #32529B;
+  color: white;
+}
+
+.seconds .number,
+.seconds .identifier {
+  background-color: #63a437;
+  color: white;
+}
+
+.meridiem .number,
+.meridiem .identifier {
+  background-color: red;
+  color: white;
+}

@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2em;
+  gap: 3vmin;
 
   margin: 15vh 0 0 0;
 }
@@ -18,17 +18,17 @@
 .basic-block {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2vmin;
 }
 
 .number {
-  font: 128px ticking;
+  font: 12vmin ticking;
   width: 1em;
   padding: 16px 16px 0 16px;
   text-align: center;
 }
 .identifier {
-  font: 36px ticking;
+  font: 3vmin ticking;
   padding: 8px 8px 0 8px;
   text-align: center;
 }

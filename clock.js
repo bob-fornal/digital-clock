@@ -7,33 +7,45 @@ class Clock {
     seconds: null,
     meridiem: null
   };
+  items = Object.keys(this.placeholders);
 
   constructor() {
     this.init();
   }
 
   init = () => {
-    this.placeholders.hours = document.getElementById('hours').getElementsByClassName('number')[0];
-    this.placeholders.minutes = document.getElementById('minutes').getElementsByClassName('number')[0];
-    this.placeholders.seconds = document.getElementById('seconds').getElementsByClassName('number')[0];
-    this.placeholders.meridiem = document.getElementById('meridiem').getElementsByClassName('number')[0];
-    console.log(this.placeholders);
-
+    this.captureElements();
     setInterval(this.processTime.bind(this), 1000);
   };
 
   processTime = () => {
     const date = new Date();
+    const hours24 = date.getHours();
+    const hours12 = hours24 % 12;
 
-    const hours = ((date.getHours() % 12) ? (date.getHours() % 12) : 12).toString().padStart(2, '0');
-    const meridiem = (date.getHours() >= 12) ? 'PM' : 'AM';
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const seconds = date.getSeconds().toString().padStart(2, '0');
+    const hours = this.toPaddedString((hours12) ? hours12 : 12);
+    const meridiem = (hours24 >= 12) ? 'PM' : 'AM';
+    const minutes = this.toPaddedString(date.getMinutes());
+    const seconds = this.toPaddedString(date.getSeconds());
 
-    this.placeholders.hours.innerText = hours;
-    this.placeholders.minutes.innerText = minutes;
-    this.placeholders.seconds.innerText = seconds;
-    this.placeholders.meridiem.innerText = meridiem;
+    this.setElements({ hours, minutes, seconds, meridiem });
+  };
+
+  // Abstractions
+  getElement = (content) => document.getElementById(content).getElementsByClassName('number')[0];
+
+  captureElements = () => {
+    this.items.forEach((item) => {
+      this.placeholders[item] = this.getElement(item);
+    });
+  };
+
+  toPaddedString = (data) => data.toString().padStart(2, '0');
+
+  setElements = (data) => {
+    this.items.forEach((item) => {
+      this.placeholders[item].innerText = data[item];  
+    });
   };
 
 }

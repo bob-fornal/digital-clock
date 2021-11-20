@@ -12,7 +12,7 @@
   justify-content: center;
   gap: 2em;
 
-  margin: 2em;
+  margin: 15vh 0 0 0;
 }
 
 .basic-block {
@@ -22,7 +22,8 @@
 }
 
 .number {
-  font: 96px ticking;
+  font: 128px ticking;
+  width: 1em;
   padding: 16px 16px 0 16px;
   text-align: center;
 }
@@ -32,26 +33,27 @@
   text-align: center;
 }
 
+.number,
+.identifier {
+  color: white;
+}
+
 .hours .number,
 .hours .identifier {
   background-color: blue;
-  color: white;
 }
 
 .minutes .number,
 .minutes .identifier {
   background-color: #32529B;
-  color: white;
 }
 
 .seconds .number,
 .seconds .identifier {
   background-color: #63a437;
-  color: white;
 }
 
 .meridiem .number,
 .meridiem .identifier {
   background-color: red;
-  color: white;
 }

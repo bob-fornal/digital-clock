@@ -123,11 +123,11 @@ body {
 
 .number-top {
   display: block;
-  font-size: 9vmin;
+  font-size: 7vmin;
   
   height: 2.5vmin;
   width: 12vmin;
-  padding: 2.5vmin;
+  padding: 3.5vmin 2.5vmin 1.5vmin 2.5vmin;
 
   text-align: center;
   border-radius: 0.15em 0.15em 0 0;
@@ -162,11 +162,11 @@ body {
   color: #ffffff;
 
   display: block;
-  font-size: 9vmin;
+  font-size: 7vmin;
 
   height: 2.5vmin;
   width: 12vmin;
-  padding: 3.8vmin 2.5vmin 1.2vmin 2.5vmin;
+  padding: 4.8vmin 2.5vmin 0.2vmin 2.5vmin;
 
   text-align: center;
   border-radius: 0 0 0.15em 0.15em; 
@@ -199,9 +199,9 @@ body {
 
   height: 2.5vmin;
   width: 12vmin;
-  padding: 2.5vmin;
+  padding: 3.5vmin 2.5vmin 1.5vmin 2.5vmin;
 
-  font-size: 9vmin;
+  font-size: 7vmin;
   border-radius: 0.15em 0.15em 0 0;
   text-align: center;
 

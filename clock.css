@@ -37,12 +37,14 @@ body {
 }
 
 .basic-block .number {
+  border: 1px solid silver;
   font: 12vmin ticking;
   width: 1em;
   padding: 16px 16px 0 16px;
   text-align: center;
 }
 .basic-block .identifier {
+  border: 1px solid silver;
   font: 3vmin ticking;
   padding: 8px 8px 0 8px;
   text-align: center;
@@ -82,6 +84,7 @@ body {
 }
 
 .flip-wrapper .identifier {
+  border: 1px solid silver;
   font: 3vmin bold serif;
   padding: 8px;
   text-align: center;
@@ -97,6 +100,8 @@ body {
 .hours .number-back::after,
 .hours .number-top {
   background-color: var(--hours-bg-dk);
+  border: 1px solid silver;
+  border-bottom: solid 2px #000;
   color: var(--fg-dk);
 }
 
@@ -104,6 +109,8 @@ body {
 .minutes .number-back::after,
 .minutes .number-top {
   background-color: var(--minutes-bg-dk);
+  border: 1px solid silver;
+  border-bottom: solid 2px #000;
   color: var(--fg-dk);
 }
 
@@ -111,6 +118,8 @@ body {
 .seconds .number-back::after,
 .seconds .number-top {
   background-color: var(--seconds-bg-dk);
+  border: 1px solid silver;
+  border-bottom: solid 2px #000;
   color: var(--fg-dk);
 }
 
@@ -118,6 +127,8 @@ body {
 .meridiem .number-back::after,
 .meridiem .number-top {
   background-color: var(--meridiem-bg-dk);
+  border: 1px solid silver;
+  border-bottom: solid 2px #000;
   color: var(--fg-dk);
 }
 
@@ -169,7 +180,8 @@ body {
   padding: 4.8vmin 2.5vmin 0.2vmin 2.5vmin;
 
   text-align: center;
-  border-radius: 0 0 0.15em 0.15em; 
+  border: 1px solid silver;
+  border-radius: 0 0 0.15em 0.15em;
   overflow: hidden;
 
   border-top: solid 2px #000;
